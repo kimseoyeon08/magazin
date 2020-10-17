@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+/*reset*/
+* { margin: 0; padding: 0;}
+a{ color: inherit; text-decoration: none;}
+li { list-style: none;}
+
+/*layout*/
+body {font-family:'Quicksand', sans-serif;
+        font-size: 16px; color: #444;}
+.wrap { width: 100%;}
+.PHOTOGALLERY { width: 100%; padding-top: 100px;}
+.PHOTOGALLERY .titlebox{ text-align: center; margin-bottom: 200px;}
+.PHOTOGALLERY .titlebox h3 { font-size: 28px; font-family:'Nanum Myeongjo', serif;
+                            margin-bottom: 10px; animation-name: slid-up;
+                            animation-duration: 0.8s; }
+@keyframes slid-up {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: translateY(20px);}
+}
+.PHOTOGALLERY .titlebox p{animation-name: slid-up; animation-duration: 1.3s; }
+.PHOTOGALLERY .titlebox .btn {font-family:'Nanum Myeongjo', serif; display: block; margin: 20px auto 0;
+                              color: #444; padding: 8px 12px; font-size: 17px; font-weight: bold; 
+                              width: 200px; border-radius: 50px; 
+                              border: 1.6px solid #ddd; position: relative; overflow: hidden; z-index: 1;
+                              animation-name: slid-up; animation-duration: 1s;}
+.PHOTOGALLERY .titlebox .btn:after { content: ''; width: 0;
+                                    height: 100%; background: #ff8342; position: absolute; left: 0; top: 0; z-index: -1;
+                                    transition: all 0.5s;}
+.PHOTOGALLERY .titlebox .btn.PHOTOGALLERY .titlebox .btn:hover:after {width: 100%; }
+/*ul*/
+.PHOTOGALLERY ul { width: 1280px; margin: 0 auto; 
+    overflow: hidden;}      
+.PHOTOGALLERY ul li { float: left; width: 31.3333%; margin-right: 3%;
+                    margin-bottom: 30%;}  
+.PHOTOGALLERY ul li:nth-child(1),.PHOTOGALLERY ul li:nth-child(4)  {margin-top: 100px;}              
+.PHOTOGALLERY ul li:nth-child(3),.PHOTOGALLERY ul li:nth-child(6){
+   margin-right: 0; margin-top: 100px; 
+}  
+.PHOTOGALLERY ul li a { display: block; width: 100%;
+                        height: 100%; }  
+.PHOTOGALLERY ul li a:hover{ transform: translateY(-20px); transition: all 0.4s;}
+.PHOTOGALLERY ul li a p.img{width: 100%;}    
+.PHOTOGALLERY ul li a p.img img {width: 100%;}      
+.PHOTOGALLERY ul li a h3 { margin-top: 50px; padding-left: 35px; position: relative;} 
+.PHOTOGALLERY ul li a h3:after{content: '/f178'; font-family: fontAwesome; font-size: 15px; 
+                                position: absolute;left: 0; top: 0; width: 30px; height: 30px; line-height: 30px;border-radius: 50%;
+                            background: #ff8342; }
+.PHOTOGALLERY ul li a .inner{ padding-left: 30px; }
+.PHOTOGALLERY ul li a .inner p.date{ color: #888;}
